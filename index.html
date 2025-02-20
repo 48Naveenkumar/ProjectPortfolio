@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naveen48 Project Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .project-name {
+            border: 2px solid lightblue;
+            padding: 10px;
+            box-shadow: 0 0 20px lightblue;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px lightblue;
+        }
+        .contact-button {
+            background: lightblue;
+            color: black;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .contact-button:hover {
+            background: white;
+        }
+        .needle-line {
+            width: 90%;
+            height: 2px;
+            background: lightblue;
+            margin: 20px auto;
+        }
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 50px; /* Controls top to bottom gap */
+            column-gap: 50px; /* Controls left to right gap */
+            justify-content: flex-start;
+            padding-left: 150px; /* Adds left margin to the first column */
+        }
+
+        .project-box {
+            background: #1a1a1a;
+            border-radius: 10px;
+            padding: 15px;
+            width: 325px;
+            text-align: left;
+            box-shadow: 0 0 10px rgba(173, 216, 230, 0.5);
+            transition: 0.3s;
+        }
+
+        @media (max-width: 900px) {
+            .project-box {
+                width: calc(50% - 20px); /* 2 boxes per row on smaller screens */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .project-box {
+                width: 100%; /* 1 box per row on very small screens */
+            }
+        }
+
+        .project-box:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 12px rgba(173, 216, 230, 0.7);
+        }
+        .project-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .project-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            border-bottom: 3px solid lightblue;
+            padding-bottom: 5px;
+        }
+        .project-title img {
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+        }
+        .tech-icons {
+            justify-content: center;
+            gap: 10px;
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            position: relative;
+        }
+        .tech-icons img {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            position: relative;
+            border: 2px solid transparent; /* Default border transparent */
+            transition: border-color 0.1s ease-in-out, transform 0.1s ease-in-out;
+        }
+        .tech-icons img:hover::after {
+            border-color: lightblue; /* Light blue border on hover */
+            transform: scale(1.1); /* Slight zoom effect */
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 2px solid lightblue;
+        }
+        .footer a {
+            margin-right: 10px;
+        }
+        .footer a img {
+            width: 30px; /* Icon size */
+            height: 30px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="project-name">PROJECTS</div>
+        
+        <a href="https://www.linkedin.com/in/naveenkumarrv/" class="contact-button">Contact</a>
+    </div>
+    
+    <div class="needle-line"></div>
+    
+    <div class="project-container">
+        <div class="project-box">
+            <img src="images/Resumeparse.png" alt="Project Image">
+            <div class="project-title">AI Powered Resume Screener API<a href="https://github.com/48Naveenkumar/AI-Powered-Resume-Screener-FastAPI-PostgreSQL-OpenAI-"><img src="images/github1.png" alt="Link" title="Github Link"></a> </div>
+            <p>AI-Powered Resume Screener built with FastAPI, PostgreSQL, and OpenAI.</p>
+            <div class="tech-icons">
+                <a href="https://www.python.org/"><img src="images/python.png" alt="Python" title="Python"></a>
+                <a href="https://code.visualstudio.com/"><img src="images/vscodeicon.png" alt="VS Code" title="VS Code"></a>
+                <img src="images/machinelearning.png" alt="PDF" title="Machine Learning"></a>
+                <img src="images/generative.png" alt="PDF" title="Open AI"></a>               
+           </div>
+        </div>
+
+        <div class="project-box">
+            <img src="images/Project2.jpeg" alt="Project Image">
+            <div class="project-title">Github Activity Generator<a href="https://github.com/48Naveenkumar/github-activity-generator"><img src="images/github1.png" alt="Link" title="Github activity.. Link"></a> </div>
+            <p>GitHub Activity Generator is a powerful Node.js tool that leverages the GitHub API and Moment.js to fetch and display real-time user activity.</p>
+            <div class="tech-icons">
+                <a href="https://www.python.org/"><img src="images/python.png" alt="Python" title="Python"></a>
+                <a href="https://code.visualstudio.com/"><img src="images/vscodeicon.png" alt="VS Code" title="VS Code"></a>
+            </div>
+        </div>
+        
+        <div class="project-box">
+            <img src="images/rpaimage.png" alt="Project Image">
+            <div class="project-title">RPA Bots using A360Tool <a href="https://github.com/48Naveenkumar/RPA_AutomationAnywhere_Bots-using-360Tool"><img src="images/github1.png" alt="Link" title="Github activity.. Link"></a> </div>
+            <p>This repository features a collection of Automation Anywhere A360 bots designed to automate various tasks, extracting and converting data between PDF and CSV</p>
+            <div class="tech-icons">
+                <a href="https://www.python.org/"><img src="images/python.png" alt="Python" title="Python"></a>
+                <a href="https://code.visualstudio.com/"><img src="images/vscodeicon.png" alt="VS Code" title="VS Code"></a>
+            </div>
+        </div>
+
+        <div class="project-box">
+            <img src="images/Resumeparse.png" alt="Project Image">            
+            <div class="project-title"> RESUME PARSE<a href="https://github.com/48Naveenkumar/Resumeparse"><img src="images/github1.png" alt="Link" title="Github activity.. Link"></a> </div>
+            <p>Resume parsing extracts structured data from resumes using NLP, Supports multiple file formats.</p>
+            <div class="tech-icons">
+                <a href="https://www.python.org/"><img src="images/python.png" alt="Python" title="Python"></a>
+                <a href="https://code.visualstudio.com/"><img src="images/vscodeicon.png" alt="VS Code" title="VS Code"></a>
+            </div>
+        </div>
+
+        <div class="project-box">
+            <img src="images/Project5.jpeg" alt="Project Image">
+            <div class="project-title">Mario Flappy Adventure using Python <a href="https://github.com/48Naveenkumar/Resumeparse"><img src="images/github1.png" alt="Link"></a></div>
+            <p>Resume parsing extracts structured data from resumes using NLP, Supports multiple file formats.</p>
+            <div class="tech-icons">
+                <a href="https://www.python.org/"><img src="images/python.png" alt="Python" title="Python"></a>
+                <a href="https://code.visualstudio.com/"><img src="images/vscodeicon.png" alt="VS Code" title="VS Code"></a>
+            </div>
+        </div>
+
+        <div class="project-box">
+            <img src="images/Resumeparse.png" alt="Project Image">
+            <div class="project-title">Mario Flappy Adventure using Python <img src="images/link.png" alt="Link"></div>
+            <p>Resume parsing extracts structured data from resumes using NLP, Supports multiple file formats.</p>
+            <div class="tech-icons">
+                <a href="https://www.python.org/"><img src="images/python.png" alt="Python" title="Python"></a>
+                <a href="https://code.visualstudio.com/"><img src="images/vscodeicon.png" alt="VS Code" title="VS Code"></a>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="footer">
+        <div class="credits">© Naveen Kumar</div>
+        <div class="social-icons">
+            <a href="mailto:naveenkumarrv48@gmail.com"><img src="images/gmailicon.png" alt="Gmail" title="Gmail"></a>
+            <a href="https://www.linkedin.com/in/naveenkumarrv/"><img src="images/linkedin.png" alt="LinkedIn" title="LinkedIn"></a>
+            <a href="https://github.com/Naveensmart48?tab=repositories"><img src="images/github1.png" alt="GitHub" title="GitHub"></a>
+            <a href="https://leetcode.com/u/Naveenkumar48/"><img src="images/leetcode.png" alt="LeetCode" title="LeetCode"></a>
+        </div>
+    </div>
+</body>
+</html>

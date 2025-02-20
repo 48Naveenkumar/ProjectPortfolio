@@ -1,0 +1,44 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 0 0; display: flex; gap: 3.5cm;
+    position: absolute;
+    top: 0;
+}
+
+.project-name {
+    color: white;
+    font-size: 24px;
+    padding: 5px;
+    border: 2px solid lightblue;
+    box-shadow: 0 0 10px lightblue;
+}
+
+.contact-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid lightblue;
+    padding: 5px 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px lightblue;
+}
+
+.stylish-line {
+    width: 90%;
+    height: 1px;
+    background: linear-gradient(to right, lightblue, white, lightblue);
+    margin-top: 20px;
+}
