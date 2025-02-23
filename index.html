@@ -65,16 +65,28 @@
         }
 
         @media (max-width: 900px) {
-            .project-box {
-                width: calc(50% - 20px); /* 2 boxes per row on smaller screens */
-            }
-        }
+    .project-container {
+        justify-content: center; /* Center align projects */
+        padding-left: 0; /* Remove left padding */
+    }
+    .project-box {
+        width: 80%; /* Reduce width for better fit */
+    }
+}
 
-        @media (max-width: 600px) {
-            .project-box {
-                width: 100%; /* 1 box per row on very small screens */
-            }
-        }
+@media (max-width: 600px) {
+    .project-box {
+        width: 100%; /* Full width for small screens */
+    }
+    .header, .footer {
+        flex-direction: column; /* Stack elements */
+        text-align: center;
+    }
+    .contact-button {
+        margin-top: 10px;
+    }
+}
+
 
         .project-box:hover {
             transform: scale(1.03);
