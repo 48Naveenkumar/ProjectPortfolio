@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naveen48 Project Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>My Portfolio</title>
     <style>
+        /* General Styles */
         body {
             background-color: black;
             color: white;
             margin: 0;
             font-family: Arial, sans-serif;
             font-size: 18px;
+            text-align: center;
         }
+
+        /* Header */
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px;
+            flex-wrap: wrap;
         }
         .project-name {
             border: 2px solid lightblue;
@@ -39,21 +43,25 @@
         .contact-button:hover {
             background: white;
         }
+
+        /* Separator */
         .needle-line {
             width: 90%;
             height: 2px;
             background: lightblue;
             margin: 20px auto;
         }
+
+        /* Project Container */
         .project-container {
             display: flex;
             flex-wrap: wrap;
-            row-gap: 50px; /* Controls top to bottom gap */
-            column-gap: 50px; /* Controls left to right gap */
-            justify-content: flex-start;
-            padding-left: 150px; /* Adds left margin to the first column */
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
         }
 
+        /* Project Box */
         .project-box {
             background: #1a1a1a;
             border-radius: 10px;
@@ -63,19 +71,6 @@
             box-shadow: 0 0 10px rgba(173, 216, 230, 0.5);
             transition: 0.3s;
         }
-
-        @media (max-width: 900px) {
-            .project-box {
-                width: calc(50% - 20px); /* 2 boxes per row on smaller screens */
-            }
-        }
-
-        @media (max-width: 600px) {
-            .project-box {
-                width: 100%; /* 1 box per row on very small screens */
-            }
-        }
-
         .project-box:hover {
             transform: scale(1.03);
             box-shadow: 0 0 12px rgba(173, 216, 230, 0.7);
@@ -86,6 +81,8 @@
             display: block;
             margin-bottom: 10px;
         }
+
+        /* Project Title */
         .project-title {
             font-size: 20px;
             font-weight: bold;
@@ -95,32 +92,25 @@
             border-bottom: 3px solid lightblue;
             padding-bottom: 5px;
         }
-        .project-title img {
-            width: 20px;
-            height: 20px;
-            margin-left: 10px;
-        }
+
+        /* Tech Icons */
         .tech-icons {
+            display: flex;
             justify-content: center;
             gap: 10px;
-            display: flex;
-            gap: 10px;
             margin-top: 10px;
-            position: relative;
         }
         .tech-icons img {
             width: 40px;
             height: 40px;
             cursor: pointer;
-            position: relative;
-            border: 2px solid transparent; /* Default border transparent */
-            transition: border-color 0.1s ease-in-out, transform 0.1s ease-in-out;
+            transition: transform 0.1s ease-in-out;
         }
-        .tech-icons img:hover::after {
-            border-color: lightblue; /* Light blue border on hover */
-            transform: scale(1.1); /* Slight zoom effect */
+        .tech-icons img:hover {
+            transform: scale(1.1);
         }
 
+        /* Footer */
         .footer {
             display: flex;
             justify-content: space-between;
@@ -128,146 +118,93 @@
             padding: 20px;
             margin-top: 40px;
             border-top: 2px solid lightblue;
+            flex-wrap: wrap;
         }
         .footer a {
             margin-right: 10px;
         }
         .footer a img {
-            width: 30px; /* Icon size */
+            width: 30px;
             height: 30px;
             transition: transform 0.3s ease, opacity 0.3s ease;
         }
 
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .project-box {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .project-box {
+                width: 90%;
+            }
+            .header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="project-name">PROJECTS</div>
-       
-        <a href="mailto:naveenkumarrv48@gmail.com" class="contact-button">Contact</a>
-    </div>
-    
+
+    <!-- Header -->
+    <header class="header">
+        <div class="project-name">My Portfolio</div>
+        <a href="mailto:youremail@example.com" class="contact-button">Contact Me</a>
+    </header>
+
+    <!-- Separator Line -->
     <div class="needle-line"></div>
-    
-    <div class="project-container">
-        <div class="project-box">
-            <img src="images/Resumeparse.png" alt="Project Image">
-            <div class="project-title">AI Powered Resume Screener API<a href="https://github.com/48Naveenkumar/AI-Powered-Resume-Screener-FastAPI-PostgreSQL-OpenAI-"><img src="images/github1.png" alt="Link" title="Github Link"></a> </div>
-            <p>AI-Powered Resume Screener built with FastAPI, PostgreSQL, and OpenAI.</p>
-            <div class="tech-icons">
-                <a href="https://www.python.org/"><img src="images/python.png" alt="Python" title="Python"></a>
-                <a href="https://code.visualstudio.com/"><img src="images/vscodeicon.png" alt="VS Code" title="VS Code"></a>
-                <a href="https://fastapi.tiangolo.com/"><img src="images/FastAPI.png" alt="FastAPI" title="FastAPI"></a>
-                <img src="images/machinelearning.png" alt="Machine Learning" title="Machine Learning">
-                        
-           </div>
-        </div>
 
+    <!-- Project Section -->
+    <section class="project-container">
         <div class="project-box">
-            <img src="images/Project2.jpeg" alt="Project Image">
-            <div class="project-title">Github Activity Generator<a href="https://github.com/48Naveenkumar/github-activity-generator"><img src="images/github1.png" alt="Link" title="Github activity.. Link"></a> </div>
-            <p>GitHub Activity Generator is a powerful Node.js tool that leverages the GitHub API and Moment.js to fetch and display real-time user activity.</p>
+            <img src="project1.jpg" alt="Project 1">
+            <div class="project-title">Project One</div>
+            <p>A short description of the project.</p>
             <div class="tech-icons">
-                <a href="https://nodejs.org/"><img src="images/nodejs.png" alt="Node.js" title="Node.js"></a>
-                <a href="https://momentjs.com/"><img src="images/momentjs.png" alt="Moment.js" title="Moment.js"></a>
-                <a href="https://expressjs.com/"><img src="images/expressjs.png" alt="Express.js" title="Express.js"></a>
-            </div>
-        </div>
-        
-        <div class="project-box">
-            <img src="images/rpaimage.png" alt="Project Image">
-            <div class="project-title">RPA Bots using A360Tool <a href="https://github.com/48Naveenkumar/RPA_AutomationAnywhere_Bots-using-360Tool"><img src="images/github1.png" alt="Link" title="Github activity.. Link"></a> </div>
-            <p>This repository features a collection of Automation Anywhere A360 bots designed to automate various tasks, extracting and converting data between PDF and CSV</p>
-            <div class="tech-icons">
-                <a href="https://www.automationanywhere.com/products/robotic-process-automation"><img src="images/bot.png" alt="Automation Anywhere A360" title="Automation Anywhere A360"></a>
-                <a href="https://www.adobe.com/pdf"><img src="images/pdf.png" alt="PDF" title="PDF"></a>
-                <a href="https://www.python.org/"><img src="images/python.png" alt="Python" title="Python"></a>
+                <img src="html-icon.png" alt="HTML">
+                <img src="css-icon.png" alt="CSS">
+                <img src="js-icon.png" alt="JavaScript">
             </div>
         </div>
 
         <div class="project-box">
-            <img src="images/API.jpg" alt="Project Image" width="50" height="25">
-            <div class="project-title">Automated API Testing Framework <a href="https://github.com/48Naveenkumar/-Automated-API-Testing-Framework-"><img src="images/github1.png" alt="Link" title="Automated Link"></a> </div>
-            <p>A powerful API testing setup using Postman, Newman, Pytest, and Docker**. Run tests effortlessly from CLI, generate detailed reports 📊</p>
+            <img src="project2.jpg" alt="Project 2">
+            <div class="project-title">Project Two</div>
+            <p>A short description of the project.</p>
             <div class="tech-icons">
-                <a href="https://git-scm.com/"><img src="images/git.png" alt="Git" title="Git"></a>
-                <a href="https://github.com/"><img src="images/github.png" alt="GitHub" title="GitHub"></a>
-                <a href="https://www.docker.com/"><img src="images/docker.png" alt="Docker" title="Docker"></a>                
-            </div>
-        </div>
-        
-
-        <div class="project-box">
-            <img src="images/proj3.jpeg" alt="Project Image">            
-            <div class="project-title"> Personal Finance Tracker with AI Expense Prediction <a href="https://github.com/48Naveenkumar/Personal-Finance-Tracker-with-AI-Expense-Prediction"><img src="images/github1.png" alt="Link" title="Github activity.. Link"></a> </div>
-            <p>Personal Finance Tracker with AI-powered expense prediction. Built using Django, React.js, TensorFlow, and PostgreSQL.</p>
-            <div class="tech-icons">
-                <a href="https://www.djangoproject.com/"><img src="images/django.png" alt="Django" title="Django"></a>
-                <a href="https://react.dev/"><img src="images/react.png" alt="React.js" title="React.js"></a>
-                <a href="https://www.tensorflow.org/"><img src="images/tensor.png" alt="TensorFlow" title="TensorFlow"></a>
-               </div>
-        </div>
-
-        <div class="project-box">
-            <img src="images/Resumeparse.png" alt="Project Image">            
-            <div class="project-title"> RESUME PARSE<a href="https://github.com/48Naveenkumar/Resumeparse"><img src="images/github1.png" alt="Link" title="Github activity.. Link"></a> </div>
-            <p>Resume Parser with Flask & Tailwind A smart Resume Parser that extracts Name, Email, Phone, Skills & more from resumes 📄✨. ✅ Upload PDF/DOCX/TXT or Paste Text ✅ Fast, Accurate & Clean UI 🚀 </p>
-            <div class="tech-icons">
-                <a href="https://www.python.org/"><img src="images/python.png" alt="Python" title="Python"></a>
-                <a href="https://code.visualstudio.com/"><img src="images/vscodeicon.png" alt="VS Code" title="VS Code"></a>
+                <img src="react-icon.png" alt="React">
+                <img src="node-icon.png" alt="Node.js">
             </div>
         </div>
 
         <div class="project-box">
-            <img src="images/proj3.png" alt="Project Image">
-            <div class="project-title">Forecasting the Solar Power with ML ALgorithms <a href="https://ieeexplore.ieee.org/abstract/document/10128530"><img src="images/link.png" alt="Link"></a></div>
-            <p>Resume parsing extracts structured data from resumes using NLP, Supports multiple file formats.</p>
+            <img src="project3.jpg" alt="Project 3">
+            <div class="project-title">Project Three</div>
+            <p>A short description of the project.</p>
             <div class="tech-icons">
-                <a href="https://www.python.org/"><img src="images/python.png" alt="Python" title="Python"></a>
-                <a href="https://www.python.org/"><img src="images/iee.png" alt="IEEE" title="IEEE"></a>
-                <a href="https://code.visualstudio.com/"><img src="images/colab.png" alt="Colab" title="Colab"></a>
+                <img src="python-icon.png" alt="Python">
+                <img src="django-icon.png" alt="Django">
             </div>
         </div>
-        
-        <div class="project-box">
-            <img src="images/proj4.png" alt="Project Image">
-            <div class="project-title">Fuzzy clustering using Hybrid CSO-PSO ML ALgorithms <a href="https://ieeexplore.ieee.org/document/9418026"><img src="images/link.png" alt="Link"></a></div>
-            <p>The effect of mobility habits might be considerably high in the spread of disease. This work analyzes the mobility patterns in selected districts of Tamilnadu and applies Fuzzy C-Means</p>
-            <div class="tech-icons">
-                <a href="https://www.python.org/"><img src="images/python.png" alt="Python" title="Python"></a>
-                <a href="https://www.python.org/"><img src="images/iee.png" alt="IEEE" title="IEEE"></a>
-                <a href="https://code.visualstudio.com/"><img src="images/vscodeicon.png" alt="VS Code" title="VS Code"></a>
-            </div>
-        </div>
+    </section>
 
-        <div class="project-box">
-            <img src="images/proj6.png" alt="Project Image">
-            <div class="project-title">Startup Employee ManagementSystem using Java <a href="https://github.com/48Naveenkumar/Startup-EmployeeManagementSystem_using-Java"><img src="images/github1.png" alt="Link"></a></div>
-            <p>Employee Management System is a Java-based application designed to manage employee information efficiently.</p>
-            <div class="tech-icons">
-                <a href="https://www.java.org/"><img src="images/java.png" alt="Java" title="Java"></a>
-                <a href="https://code.visualstudio.com/"><img src="images/vscodeicon.png" alt="VS Code" title="VS Code"></a>
-            </div>
-        </div>
-             
-        <div class="project-box">
-            <img src="images/Project5.jpeg" alt="Project Image">
-            <div class="project-title">Mario Flappy Adventure using Python <a href="https://github.com/48Naveenkumar/Mario-Flappy-Adventure-using-Python"> <img src="images/github1.png" alt="Link"></a></div>
-            <p>A fun twist on the classic Flappy Bird game with Mario using Python, Pygame, and NEAT AI</p>
-            <div class="tech-icons">
-                <a href="https://www.python.org/"><img src="images/python.png" alt="Python" title="Python"></a>
-                <a href="https://code.visualstudio.com/"><img src="images/vscodeicon.png" alt="VS Code" title="VS Code"></a>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <div class="credits">© Naveen Kumar</div>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 My Portfolio | Built with ❤️</p>
         <div class="social-icons">
-            <a href="https://www.linkedin.com/in/naveenkumarrv/"><img src="images/linkedin.png" alt="LinkedIn" title="LinkedIn"></a>
-            <a href="https://github.com/48Naveenkumar"><img src="images/github1.png" alt="GitHub" title="GitHub"></a>
-            <a href="https://leetcode.com/u/Naveenkumar48/"><img src="images/leetcode.png" alt="LeetCode" title="LeetCode"></a>
+            <a href="https://github.com/yourgithub" target="_blank"><img src="github-icon.png" alt="GitHub"></a>
+            <a href="https://linkedin.com/in/yourlinkedin" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
         </div>
-    </div>
+    </footer>
+
 </body>
 </html>
